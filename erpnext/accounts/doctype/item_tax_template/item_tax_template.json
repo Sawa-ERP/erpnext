@@ -57,7 +57,7 @@
   }
  ],
  "links": [],
- "modified": "2023-07-09 18:11:23.105589",
+ "modified": "2026-06-28 10:17:51.688561",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Item Tax Template",
@@ -88,13 +88,16 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Accounts User",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "show_name_in_global_search": 1,

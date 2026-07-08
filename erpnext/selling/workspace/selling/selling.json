@@ -539,7 +539,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Selling",
-   "link_count": 8,
+   "link_count": 9,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -553,6 +553,16 @@
    "link_to": "Customer",
    "link_type": "DocType",
    "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Proposal",
+   "link_count": 0,
+   "link_to": "Project Proposal",
+   "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
@@ -632,7 +642,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-02-10 08:59:24.474639",
+ "modified": "2026-07-08 10:25:21.551388",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Selling",

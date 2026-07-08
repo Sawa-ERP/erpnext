@@ -16,6 +16,14 @@
   "item_name",
   "item_group",
   "stock_uom",
+  "length_mm",
+  "width_mm",
+  "thickness_mm",
+  "calculated_weight",
+  "depth",
+  "diameter",
+  "beams",
+  "beams_type",
   "column_break0",
   "disabled",
   "allow_alternative_item",
@@ -37,6 +45,48 @@
   "brand",
   "unit_of_measure_conversion",
   "uoms",
+  "product_specs_tab",
+  "model_information_section",
+  "model_code",
+  "abbreviation",
+  "column_break_iuys",
+  "number_of_cars",
+  "levels",
+  "column_break_mydc",
+  "max_load",
+  "stroke",
+  "vehicle_specs_section",
+  "vehicle_length",
+  "column_break_ztqg",
+  "vehicle_width",
+  "column_break_czmy",
+  "vehicle_height",
+  "column_break_ioiv",
+  "vehicle_weight",
+  "technical_specs_section",
+  "drive_mode",
+  "lifting_motor",
+  "lock_release",
+  "column_break_wpez",
+  "power_supply",
+  "sliding_motor",
+  "country",
+  "commercial_defaults_section",
+  "standard_production_time_days",
+  "column_break_htfr",
+  "standard_delivery_time_days",
+  "column_break_hcbr",
+  "installation_time_days",
+  "column_break_wdkw",
+  "warranty_months",
+  "attachments_section",
+  "product_image",
+  "drawing_pdf",
+  "dwg_drawing",
+  "column_break_aszi",
+  "product_catalog",
+  "technical_data_sheet",
+  "installation_manual",
   "dashboard_tab",
   "inventory_section",
   "inventory_settings_section",
@@ -116,7 +166,10 @@
   "customer_code",
   "default_item_manufacturer",
   "default_manufacturer_part_no",
-  "total_projected_qty"
+  "total_projected_qty",
+  "part_list_tab",
+  "component_list_section",
+  "items"
  ],
  "fields": [
   {
@@ -891,6 +944,265 @@
    "fieldname": "deferred_accounting_section",
    "fieldtype": "Section Break",
    "label": "Deferred Accounting"
+  },
+  {
+   "fieldname": "length_mm",
+   "fieldtype": "Float",
+   "label": "Length"
+  },
+  {
+   "fieldname": "width_mm",
+   "fieldtype": "Float",
+   "label": "Width"
+  },
+  {
+   "fieldname": "thickness_mm",
+   "fieldtype": "Float",
+   "label": "Thickness"
+  },
+  {
+   "fieldname": "calculated_weight",
+   "fieldtype": "Float",
+   "label": "Weight (Calculated)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "depth",
+   "fieldtype": "Float",
+   "label": "Depth"
+  },
+  {
+   "fieldname": "diameter",
+   "fieldtype": "Float",
+   "label": "Diameter"
+  },
+  {
+   "fieldname": "beams",
+   "fieldtype": "Float",
+   "label": "Beams"
+  },
+  {
+   "fieldname": "beams_type",
+   "fieldtype": "Data",
+   "label": "Beams Type",
+   "options": "I\nH\nU"
+  },
+  {
+   "fieldname": "part_list_tab",
+   "fieldtype": "Tab Break",
+   "label": "Part List"
+  },
+  {
+   "fieldname": "component_list_section",
+   "fieldtype": "Section Break",
+   "label": "Component List"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Work Order Item"
+  },
+  {
+   "fieldname": "product_specs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Product Specs"
+  },
+  {
+   "fieldname": "model_information_section",
+   "fieldtype": "Section Break",
+   "label": "Model Information"
+  },
+  {
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "label": "Model Code"
+  },
+  {
+   "fieldname": "abbreviation",
+   "fieldtype": "Data",
+   "label": "Abbreviation"
+  },
+  {
+   "fieldname": "column_break_iuys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_cars",
+   "fieldtype": "Int",
+   "label": "Number Of Cars"
+  },
+  {
+   "fieldname": "levels",
+   "fieldtype": "Data",
+   "label": "Levels"
+  },
+  {
+   "fieldname": "column_break_mydc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_load",
+   "fieldtype": "Float",
+   "label": "Max Load (Kg)"
+  },
+  {
+   "fieldname": "stroke",
+   "fieldtype": "Float",
+   "label": "Stroke (mm)"
+  },
+  {
+   "fieldname": "vehicle_specs_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Specs"
+  },
+  {
+   "fieldname": "vehicle_length",
+   "fieldtype": "Float",
+   "label": "Vehicle Length (mm)"
+  },
+  {
+   "fieldname": "column_break_ztqg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_width",
+   "fieldtype": "Float",
+   "label": "Vehicle Width (mm)"
+  },
+  {
+   "fieldname": "column_break_czmy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_height",
+   "fieldtype": "Float",
+   "label": "Vehicle Height (mm)"
+  },
+  {
+   "fieldname": "column_break_ioiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_weight",
+   "fieldtype": "Float",
+   "label": "Vehicle Weight (Kg)"
+  },
+  {
+   "fieldname": "technical_specs_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Specs"
+  },
+  {
+   "fieldname": "drive_mode",
+   "fieldtype": "Data",
+   "label": "Drive Mode"
+  },
+  {
+   "fieldname": "column_break_wpez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "power_supply",
+   "fieldtype": "Data",
+   "label": "Power Supply"
+  },
+  {
+   "fieldname": "lock_release",
+   "fieldtype": "Small Text",
+   "label": "Lock Release"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "commercial_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Defaults"
+  },
+  {
+   "fieldname": "warranty_months",
+   "fieldtype": "Int",
+   "label": "Warranty (Months)"
+  },
+  {
+   "fieldname": "column_break_htfr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_delivery_time_days",
+   "fieldtype": "Int",
+   "label": "Standard Delivery Time (Days)"
+  },
+  {
+   "fieldname": "column_break_hcbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installation_time_days",
+   "fieldtype": "Int",
+   "label": "Installation Time (Days)"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "product_image",
+   "fieldtype": "Attach Image",
+   "label": "Product Image"
+  },
+  {
+   "fieldname": "drawing_pdf",
+   "fieldtype": "Attach",
+   "label": "Drawing Pdf"
+  },
+  {
+   "fieldname": "column_break_aszi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_catalog",
+   "fieldtype": "Attach",
+   "label": "Product Catalog"
+  },
+  {
+   "fieldname": "technical_data_sheet",
+   "fieldtype": "Attach",
+   "label": "Technical Data Sheet"
+  },
+  {
+   "fieldname": "lifting_motor",
+   "fieldtype": "Small Text",
+   "label": "Lifting Motor"
+  },
+  {
+   "fieldname": "sliding_motor",
+   "fieldtype": "Small Text",
+   "label": "Sliding Motor"
+  },
+  {
+   "fieldname": "standard_production_time_days",
+   "fieldtype": "Int",
+   "label": "Standard Production Time (Days)"
+  },
+  {
+   "fieldname": "column_break_wdkw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dwg_drawing",
+   "fieldtype": "Attach",
+   "label": "DWG Drawing"
+  },
+  {
+   "fieldname": "installation_manual",
+   "fieldtype": "Attach",
+   "label": "Installation Manual"
   }
  ],
  "icon": "fa fa-tag",
@@ -898,7 +1210,7 @@
  "image_field": "image",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2026-07-05 23:24:45.734144",
+ "modified": "2026-07-08 14:03:24.206977",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",

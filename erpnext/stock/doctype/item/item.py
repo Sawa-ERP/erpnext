@@ -59,8 +59,7 @@ class Item(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
+		from erpnext.manufacturing.doctype.work_order_item.work_order_item import WorkOrderItem
 		from erpnext.stock.doctype.item_barcode.item_barcode import ItemBarcode
 		from erpnext.stock.doctype.item_customer_detail.item_customer_detail import ItemCustomerDetail
 		from erpnext.stock.doctype.item_default.item_default import ItemDefault
@@ -69,7 +68,9 @@ class Item(Document):
 		from erpnext.stock.doctype.item_tax.item_tax import ItemTax
 		from erpnext.stock.doctype.item_variant_attribute.item_variant_attribute import ItemVariantAttribute
 		from erpnext.stock.doctype.uom_conversion_detail.uom_conversion_detail import UOMConversionDetail
+		from frappe.types import DF
 
+		abbreviation: DF.Data | None
 		allow_alternative_item: DF.Check
 		allow_negative_stock: DF.Check
 		asset_category: DF.Link | None
@@ -78,7 +79,11 @@ class Item(Document):
 		auto_create_assets: DF.Check
 		barcodes: DF.Table[ItemBarcode]
 		batch_number_series: DF.Data | None
+		beams: DF.Float
+		beams_type: DF.Data | None
 		brand: DF.Link | None
+		calculated_weight: DF.Float
+		country: DF.Link | None
 		country_of_origin: DF.Link | None
 		create_new_batch: DF.Check
 		customer: DF.Link | None
@@ -88,12 +93,15 @@ class Item(Document):
 		default_bom: DF.Link | None
 		default_item_manufacturer: DF.Link | None
 		default_manufacturer_part_no: DF.Data | None
-		default_material_request_type: DF.Literal[
-			"Purchase", "Material Transfer", "Material Issue", "Manufacture", "Customer Provided"
-		]
+		default_material_request_type: DF.Literal["Purchase", "Material Transfer", "Material Issue", "Manufacture", "Customer Provided"]
 		delivered_by_supplier: DF.Check
+		depth: DF.Float
 		description: DF.TextEditor | None
+		diameter: DF.Float
 		disabled: DF.Check
+		drawing_pdf: DF.Attach | None
+		drive_mode: DF.Data | None
+		dwg_drawing: DF.Attach | None
 		enable_deferred_expense: DF.Check
 		enable_deferred_revenue: DF.Check
 		end_of_life: DF.Date | None
@@ -106,6 +114,8 @@ class Item(Document):
 		include_item_in_manufacturing: DF.Check
 		inspection_required_before_delivery: DF.Check
 		inspection_required_before_purchase: DF.Check
+		installation_manual: DF.Attach | None
+		installation_time_days: DF.Int
 		is_customer_provided_item: DF.Check
 		is_fixed_asset: DF.Check
 		is_grouped_asset: DF.Check
@@ -117,16 +127,27 @@ class Item(Document):
 		item_defaults: DF.Table[ItemDefault]
 		item_group: DF.Link
 		item_name: DF.Data | None
+		items: DF.Table[WorkOrderItem]
 		last_purchase_rate: DF.Float
 		lead_time_days: DF.Int
+		length_mm: DF.Float
+		levels: DF.Data | None
+		lifting_motor: DF.SmallText | None
+		lock_release: DF.SmallText | None
 		max_discount: DF.Float
+		max_load: DF.Float
 		min_order_qty: DF.Float
+		model_code: DF.Data | None
 		naming_series: DF.Literal["STO-ITEM-.YYYY.-"]
 		no_of_months: DF.Int
 		no_of_months_exp: DF.Int
+		number_of_cars: DF.Int
 		opening_stock: DF.Float
 		over_billing_allowance: DF.Float
 		over_delivery_receipt_allowance: DF.Float
+		power_supply: DF.Data | None
+		product_catalog: DF.Attach | None
+		product_image: DF.AttachImage | None
 		purchase_uom: DF.Link | None
 		quality_inspection_template: DF.Link | None
 		reorder_levels: DF.Table[ItemReorder]
@@ -136,19 +157,31 @@ class Item(Document):
 		sample_quantity: DF.Int
 		serial_no_series: DF.Data | None
 		shelf_life_in_days: DF.Int
+		sliding_motor: DF.SmallText | None
+		standard_delivery_time_days: DF.Int
+		standard_production_time_days: DF.Int
 		standard_rate: DF.Currency
 		stock_uom: DF.Link
+		stroke: DF.Float
 		supplier_items: DF.Table[ItemSupplier]
 		taxes: DF.Table[ItemTax]
+		technical_data_sheet: DF.Attach | None
+		thickness_mm: DF.Float
 		total_projected_qty: DF.Float
 		uoms: DF.Table[UOMConversionDetail]
 		valuation_method: DF.Literal["", "FIFO", "Moving Average", "LIFO"]
 		valuation_rate: DF.Currency
 		variant_based_on: DF.Literal["Item Attribute", "Manufacturer"]
 		variant_of: DF.Link | None
+		vehicle_height: DF.Float
+		vehicle_length: DF.Float
+		vehicle_weight: DF.Float
+		vehicle_width: DF.Float
+		warranty_months: DF.Int
 		warranty_period: DF.Data | None
 		weight_per_unit: DF.Float
 		weight_uom: DF.Link | None
+		width_mm: DF.Float
 	# end: auto-generated types
 
 	def onload(self):

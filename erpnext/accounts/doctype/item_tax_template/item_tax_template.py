@@ -14,11 +14,8 @@ class ItemTaxTemplate(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from erpnext.accounts.doctype.item_tax_template_detail.item_tax_template_detail import ItemTaxTemplateDetail
 		from frappe.types import DF
-
-		from erpnext.accounts.doctype.item_tax_template_detail.item_tax_template_detail import (
-			ItemTaxTemplateDetail,
-		)
 
 		company: DF.Link
 		disabled: DF.Check
