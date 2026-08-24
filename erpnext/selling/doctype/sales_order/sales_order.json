@@ -239,6 +239,13 @@
    "read_only": 1
   },
   {
+    "fieldname": "project_proposal",
+    "fieldtype": "Link",
+    "label": "Project Proposal",
+    "options": "Project Proposal",
+    "read_only": 1
+  },
+  {
    "default": "Sales",
    "fieldname": "order_type",
    "fieldtype": "Select",

@@ -63,6 +63,14 @@
   "vehicle_height",
   "column_break_ioiv",
   "vehicle_weight",
+  "product_dimensions_section",
+  "product_length_mm",
+  "column_break_gvlz",
+  "product_width_mm",
+  "column_break_xrwv",
+  "product_height_mm",
+  "column_break_porf",
+  "product_weight_kg",
   "technical_specs_section",
   "drive_mode",
   "lifting_motor",
@@ -79,6 +87,10 @@
   "installation_time_days",
   "column_break_wdkw",
   "warranty_months",
+  "features_section",
+  "features",
+  "scope_of_work_section",
+  "scope_of_work",
   "attachments_section",
   "product_image",
   "drawing_pdf",
@@ -99,6 +111,7 @@
   "weight_per_unit",
   "weight_uom",
   "allow_negative_stock",
+  "stand_no",
   "sb_barcodes",
   "barcodes",
   "reorder_section",
@@ -169,7 +182,9 @@
   "total_projected_qty",
   "part_list_tab",
   "component_list_section",
-  "items"
+  "items",
+  "main_raw_materials_components_section",
+  "main_raw_materials_components"
  ],
  "fields": [
   {
@@ -1203,6 +1218,78 @@
    "fieldname": "installation_manual",
    "fieldtype": "Attach",
    "label": "Installation Manual"
+  },
+  {
+   "fieldname": "product_dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Product Dimensions"
+  },
+  {
+   "fieldname": "product_length_mm",
+   "fieldtype": "Float",
+   "label": "Product Length (mm)"
+  },
+  {
+   "fieldname": "column_break_gvlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_width_mm",
+   "fieldtype": "Float",
+   "label": "Product Width (mm)"
+  },
+  {
+   "fieldname": "column_break_xrwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_height_mm",
+   "fieldtype": "Float",
+   "label": "Product Height (mm)"
+  },
+  {
+   "fieldname": "column_break_porf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_weight_kg",
+   "fieldtype": "Float",
+   "label": "Product Weight (Kg)"
+  },
+  {
+   "fieldname": "stand_no",
+   "fieldtype": "Data",
+   "label": "Stand No"
+  },
+  {
+   "fieldname": "features_section",
+   "fieldtype": "Section Break",
+   "label": "Features"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Text Editor",
+   "label": "Features"
+  },
+  {
+   "fieldname": "main_raw_materials_components_section",
+   "fieldtype": "Section Break",
+   "label": "Main Raw Materials Components"
+  },
+  {
+   "fieldname": "main_raw_materials_components",
+   "fieldtype": "Text Editor",
+   "label": "Main Raw Materials Components"
+  },
+  {
+   "fieldname": "scope_of_work_section",
+   "fieldtype": "Section Break",
+   "label": "Scope Of Work"
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Scope Of Work"
   }
  ],
  "icon": "fa fa-tag",
@@ -1210,7 +1297,7 @@
  "image_field": "image",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2026-07-08 14:03:24.206977",
+ "modified": "2026-08-23 12:59:23.228342",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",

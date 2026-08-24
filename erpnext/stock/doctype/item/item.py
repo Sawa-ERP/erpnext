@@ -105,6 +105,7 @@ class Item(Document):
 		enable_deferred_expense: DF.Check
 		enable_deferred_revenue: DF.Check
 		end_of_life: DF.Date | None
+		features: DF.TextEditor | None
 		grant_commission: DF.Check
 		has_batch_no: DF.Check
 		has_expiry_date: DF.Check
@@ -134,6 +135,7 @@ class Item(Document):
 		levels: DF.Data | None
 		lifting_motor: DF.SmallText | None
 		lock_release: DF.SmallText | None
+		main_raw_materials_components: DF.TextEditor | None
 		max_discount: DF.Float
 		max_load: DF.Float
 		min_order_qty: DF.Float
@@ -147,7 +149,11 @@ class Item(Document):
 		over_delivery_receipt_allowance: DF.Float
 		power_supply: DF.Data | None
 		product_catalog: DF.Attach | None
+		product_height_mm: DF.Float
 		product_image: DF.AttachImage | None
+		product_length_mm: DF.Float
+		product_weight_kg: DF.Float
+		product_width_mm: DF.Float
 		purchase_uom: DF.Link | None
 		quality_inspection_template: DF.Link | None
 		reorder_levels: DF.Table[ItemReorder]
@@ -155,9 +161,11 @@ class Item(Document):
 		safety_stock: DF.Float
 		sales_uom: DF.Link | None
 		sample_quantity: DF.Int
+		scope_of_work: DF.TextEditor | None
 		serial_no_series: DF.Data | None
 		shelf_life_in_days: DF.Int
 		sliding_motor: DF.SmallText | None
+		stand_no: DF.Data | None
 		standard_delivery_time_days: DF.Int
 		standard_production_time_days: DF.Int
 		standard_rate: DF.Currency

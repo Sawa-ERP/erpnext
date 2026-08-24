@@ -76,6 +76,7 @@
   "notes_tab",
   "notes_html",
   "notes",
+  "follow_up",
   "dashboard_tab"
  ],
  "fields": [
@@ -510,6 +511,11 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "fieldname": "follow_up",
+   "fieldtype": "Small Text",
+   "label": "Follow Up"
   }
  ],
  "grid_page_length": 50,
@@ -517,7 +523,7 @@
  "idx": 5,
  "image_field": "image",
  "links": [],
- "modified": "2025-06-26 11:02:01.158901",
+ "modified": "2026-07-29 08:51:36.958351",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Lead",
