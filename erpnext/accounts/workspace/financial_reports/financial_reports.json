@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"nKKr6fjgjb\",\"type\":\"card\",\"data\":{\"card_name\":\"Ledgers\",\"col\":4}},{\"id\":\"p7NY6MHe2Y\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Statements\",\"col\":4}},{\"id\":\"3AK1Zf0oew\",\"type\":\"card\",\"data\":{\"card_name\":\"Profitability\",\"col\":4}},{\"id\":\"Q_hBCnSeJY\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
- "creation": "2024-01-05 16:09:16.766939",
+ "creation": "2026-09-01 11:40:26.283435",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -260,7 +260,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-22 08:00:55.350073",
+ "modified": "2026-09-02 07:57:40.239925",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Financial Reports",

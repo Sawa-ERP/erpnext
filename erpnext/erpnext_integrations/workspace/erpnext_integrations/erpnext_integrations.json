@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"e88ADOJ7WC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Integrations</b></span>\",\"col\":12}},{\"id\":\"pZEYOOCdB0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Browse Apps\",\"col\":3}},{\"id\":\"St7AHbhVOr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nu4oSjH5Rd\",\"type\":\"card\",\"data\":{\"card_name\":\"Authentication\",\"col\":4}},{\"id\":\"G0tyx9WOfm\",\"type\":\"card\",\"data\":{\"card_name\":\"Backup\",\"col\":4}},{\"id\":\"nG8cdkpzoc\",\"type\":\"card\",\"data\":{\"card_name\":\"Google Services\",\"col\":4}},{\"id\":\"4hwuQn6E95\",\"type\":\"card\",\"data\":{\"card_name\":\"Communication Channels\",\"col\":4}},{\"id\":\"sEGAzTJRmq\",\"type\":\"card\",\"data\":{\"card_name\":\"Payments\",\"col\":4}}]",
- "creation": "2020-08-20 19:30:48.138801",
+ "creation": "2026-09-01 11:40:25.509521",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -188,9 +188,29 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Payments",
-   "link_count": 1,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GoCardless Settings",
+   "link_count": 0,
+   "link_to": "GoCardless Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mpesa Settings",
+   "link_count": 0,
+   "link_to": "Mpesa Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -203,7 +223,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-22 08:01:00.292947",
+ "modified": "2026-09-02 07:57:42.759825",
  "modified_by": "Administrator",
  "module": "ERPNext Integrations",
  "name": "ERPNext Integrations",
